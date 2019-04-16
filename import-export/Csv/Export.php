@@ -16,7 +16,7 @@ class Export
         $this->csvProcessor = $csvProcessor;
     }
 
-    public function importFromCsvFile()
+    public function exportCsvFile()
     {
         $filePath = '/var/www/magento2/project/media/test.csv';
 
