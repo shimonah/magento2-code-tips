@@ -5,9 +5,9 @@ $packages = [];
 
 foreach ($modules['modules'] as $moduleName => $status) {
     if ($status == 0) {
-        $moduleName = str_replace('_', '', $moduleName);
+        $moduleName = str_replace('Magento_', 'Module', $moduleName);
         $moduleName = strtolower(preg_replace('/(?<!^)[A-Z]/', '-$0', $moduleName));
-        $packageName = 'module/'.$moduleName;
+        $packageName = 'magento/'.$moduleName;
         $packages[$packageName] = "*";
     }
 }
